@@ -1,4 +1,4 @@
-import VueHorizontalLine from './components/vue-horizontal-line.vue'
+import VueHorizontalLine from './../components/vue-horizontal-line.vue'
 const HorizontalLine = {
   install(Vue, options) {
     Vue.component(VueHorizontalLine.name, VueHorizontalLine)
