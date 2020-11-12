@@ -1,11 +1,29 @@
 import VueHorizontalLine from './../components/vue-horizontal-line.vue'
-const HorizontalLine = {
-  install(Vue, options) {
-    Vue.component(VueHorizontalLine.name, VueHorizontalLine)
-  }
+
+const install = function (Vue) {
+  if (install.installed) return
+  install.installed = true
+  Vue.component('VueHorizontalLine', VueHorizontalLine)
 }
-if (typeof window !== 'undefined' && window.Vue) {
-  window.HorizontalLine = HorizontalLine
-  Vue.use(HorizontalLine)
+
+const plugin = {
+  install
 }
-export default HorizontalLine
+
+let GlobalVue
+
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue
+}
+
+if (GlobalVue) {
+  GlobalVue.use(plugin)
+}
+
+VueHorizontalLine.install = install
+
+export default VueHorizontalLine
+
+export { VueHorizontalLine }
