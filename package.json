@@ -1,7 +1,7 @@
 {
   "name": "vue-horizontal-line",
   "description": "A simple horizontal line component made with Vue.js.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "373217726@qq.com <373217726@qq.com>",
   "license": "MIT",
   "private": false,
