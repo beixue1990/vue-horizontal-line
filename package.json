@@ -5,7 +5,7 @@
   "author": "373217726@qq.com <373217726@qq.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist/vue-horizontal-line.js",
+  "main": "libs/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/beixue1990/vue-horizontal-line.git"
