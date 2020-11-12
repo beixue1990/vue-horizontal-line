@@ -17,9 +17,8 @@
 </template>
 
 <script>
-import { fnHtmlLineBreak } from '../libs/util.js'
 export default {
-  name: 'VueHorizontalLine',
+  name: 'vue-horizontal-line',
   data () {
     return {
       ConstEvent: Object.freeze({
@@ -49,7 +48,15 @@ export default {
     },
   },
   methods: {
-    fnHtmlLineBreak,
+    fnHtmlLineBreak (str = '') {
+      let result
+      if (str) {
+          result = str.toString().replace(/\n|\r\n/g, '<br>')
+      } else {
+          result = ''
+      }
+      return result
+    },
 
     // 点击事件
     clickEmit (eventName, item) {

@@ -1,14 +1,14 @@
 var path = require('path')
 var webpack = require('webpack')
+const NODE_ENV = process.env.NODE_ENV
 
 module.exports = {
-  // entry: './src/main.js',
-  entry: './src/libs/index.js',
+  entry: NODE_ENV === 'development' ? './src/main.js' : './index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    // filename: 'build.js'
     filename: 'vue-horizontal-line.js'
+    // library: 'VueHorizontalLine'
   },
   module: {
     rules: [
