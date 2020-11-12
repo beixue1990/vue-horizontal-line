@@ -19,7 +19,7 @@
 <script>
 import { fnHtmlLineBreak } from '../libs/util.js'
 export default {
-  name: 'vue-horizontal-line',
+  name: 'VueHorizontalLine',
   data () {
     return {
       ConstEvent: Object.freeze({
