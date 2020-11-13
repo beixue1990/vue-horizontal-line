@@ -7,8 +7,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-horizontal-line.js'
-    // library: 'VueHorizontalLine'
+    filename: 'vue-horizontal-line.js',
+    library: 'VueHorizontalLine',
+    libraryTarget: 'umd',
+    libraryExport: 'default'
   },
   module: {
     rules: [
