@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <VueHorizontalLine style="width: 100%; height: 500px; border: 1px solid black;" :items="items" :container-background-color="containerBackgroundColor" @on-click-content="clickContent" @on-click-dot="clickDot" @on-click-instruction="clickInstruction" @on-click-line="clickLine"></VueHorizontalLine>
+    <div style="display: inline-block; width: 20%;">
+      此处模拟侧边栏
+    </div>
+    <div style="display: inline-block; width: 70%;">
+      <VueHorizontalLine style="width: 100%; height: 500px; border: 1px solid black;" :items="items" :container-background-color="containerBackgroundColor" @on-click-content="clickContent" @on-click-dot="clickDot" @on-click-instruction="clickInstruction" @on-click-line="clickLine"></VueHorizontalLine>
+    </div>
   </div>
 </template>
 
@@ -15,7 +20,7 @@ export default {
       items: [
         {
           instruction: '2020-11-01',
-          content: null,
+          content: '第一天的内容',
           dotColor: null,
           lineColor: null,
           itemCenter: false

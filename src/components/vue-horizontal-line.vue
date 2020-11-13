@@ -66,12 +66,15 @@ export default {
     // 滑动到指定位置
     instructionLineSlide () {
       this.$nextTick(() => {
-        const itemCenter = this.$refs[this.constItemCenterRef][0]
-        if (itemCenter) {
-          const container = this.$refs.vhl // 最外层容器
-          const containerWidth = container.clientWidth
-          const itemCenterLeft =  itemCenter.offsetLeft // 中间节点的左边距
-          container.scrollLeft = itemCenterLeft - (containerWidth / 2) + 175
+        const itemCenterVue = this.$refs[this.constItemCenterRef]
+        if (itemCenterVue) {
+          const itemCenterDom = itemCenterVue[0]
+          if (itemCenterDom) {
+            const container = this.$refs.vhl // 最外层容器
+            const containerWidth = container.clientWidth
+            const itemCenterDomLeft =  itemCenterDom.offsetLeft // 中间节点的左边距
+            container.scrollLeft = itemCenterDomLeft - (containerWidth / 2) + 175
+          }
         }
       })
     }
@@ -100,11 +103,12 @@ export default {
     align-items: center;
     font-size: 14px;
     text-align: left;
-    justify-content: center;
+    // justify-content: center;
 
     .vhl-container {
       white-space: nowrap;
       padding: 0 180px;
+      position: relative;
 
       .vhl-line {
         cursor: pointer;
@@ -157,7 +161,7 @@ export default {
         &:first-child {
           width: 0;
           .vhl-card-instruction {
-            left: -105px;
+            left: -60px;
           }
           .vhl-card-content {
             left: -144px;
