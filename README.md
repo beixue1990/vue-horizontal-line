@@ -31,10 +31,11 @@ export default {
 </template>
 
 <script>
-import VueHorizontalLine from './components/vue-horizontal-line.vue'
 export default {
   name: 'app',
-  components: { VueHorizontalLine },
+  components: { 
+    VueHorizontalLine: () => { return import('vue-horizontal-line') }
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

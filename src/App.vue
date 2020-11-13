@@ -128,19 +128,19 @@ export default {
   },
   methods: {
     clickContent (item) {
-      alert(`点击了【内容】，参数：${JSON.stringify(item)}`, )
+      alert(`点击了【内容】，参数：${JSON.stringify(item)}`)
     },
 
     clickInstruction (item) {
-      alert(`点击了【介绍】，参数：${JSON.stringify(item)}`, )
+      alert(`点击了【介绍】，参数：${JSON.stringify(item)}`)
     },
 
     clickDot (item) {
-      alert(`点击了【点】，参数：${JSON.stringify(item)}`, )
+      alert(`点击了【点】，参数：${JSON.stringify(item)}`)
     },
 
     clickLine (item) {
-      alert(`点击了【线】，参数：${JSON.stringify(item)}`, )
+      alert(`点击了【线】，参数：${JSON.stringify(item)}`)
     }
   }
 }
