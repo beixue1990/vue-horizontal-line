@@ -94,6 +94,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  * {
+    box-sizing: border-box;
+  }
   @line-color-default: #e5e6eb;
   .vhl {
     background-color: #fff;
@@ -109,8 +112,10 @@ export default {
       white-space: nowrap;
       padding: 0 180px;
       position: relative;
+      list-style: none;
 
       .vhl-line {
+        display: inline-block;
         cursor: pointer;
         height: 3px;
         background-color: @line-color-default;
@@ -129,8 +134,8 @@ export default {
         }
 
         .vhl-card-content {
-          width: 250px;
-          height: 150px;
+          width: 269px;
+          height: 172px;
           cursor: pointer;
           position: absolute;
           left: 37px;
@@ -173,8 +178,8 @@ export default {
           top: 50%;
           right: 0;
           bottom: 0;
-          width: 10px;
-          height: 10px;
+          width: 15px;
+          height: 15px;
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
           border-radius: 50%;
