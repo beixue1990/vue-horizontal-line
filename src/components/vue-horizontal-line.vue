@@ -106,6 +106,7 @@ export default {
     align-items: center;
     font-size: 14px;
     text-align: left;
+    line-height: 1.5;
 
     .vhl-container {
       white-space: nowrap;
@@ -134,7 +135,7 @@ export default {
 
         .vhl-card-content {
           width: 269px;
-          height: 172px;
+          height: 185px;
           cursor: pointer;
           position: absolute;
           left: 37px;
@@ -203,7 +204,7 @@ export default {
             top: 7px;
           }
           .vhl-card-content {
-            top: -189px;
+            top: -201px;
           }
           .vhl-card-content::before {
             border-width: 8px 8px 0 8px;
