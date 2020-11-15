@@ -106,7 +106,6 @@ export default {
     align-items: center;
     font-size: 14px;
     text-align: left;
-    // justify-content: center;
 
     .vhl-container {
       white-space: nowrap;
